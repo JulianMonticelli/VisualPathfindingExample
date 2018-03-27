@@ -103,7 +103,7 @@ public class DijkstraGraphPanel extends GraphPanel implements Runnable {
             
             repaint();
             try {
-                Thread.sleep(10L);
+                Thread.sleep(DELAY);
             } catch (InterruptedException ex) {
                 //
             }
@@ -112,7 +112,7 @@ public class DijkstraGraphPanel extends GraphPanel implements Runnable {
         // Update path
         GraphNode currentNode = path[currentEndTileX][currentEndTileY];
         
-        while (currentNode != nodes[currentStartTileX][currentStartTileY]) {
+        while (found && currentNode != nodes[currentStartTileX][currentStartTileY]) {
             currentNode.updateState(GraphNode.PATH);
             currentNode = path[currentNode.xPos][currentNode.yPos];
         }

@@ -23,6 +23,8 @@ class GraphPanel extends JPanel {
     
     private static final int BLOCK_BUTTON = 0xFC; // ABSOLUTELY arbitrary
     
+    protected static final long DELAY = 25L;
+    
     GSAPanel mainPanelReference;
     
     Random rand;
